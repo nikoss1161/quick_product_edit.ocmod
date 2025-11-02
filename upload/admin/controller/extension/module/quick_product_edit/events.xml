@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+    <event>
+        <code>quick_product_edit</code>
+        <trigger>admin/view/catalog/product_list/after</trigger>
+        <action>extension/module/quick_product_edit/injectScripts</action>
+        <status>1</status>
+        <sort_order>0</sort_order>
+    </event>
+</events>
