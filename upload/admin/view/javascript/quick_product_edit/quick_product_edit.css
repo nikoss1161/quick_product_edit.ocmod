@@ -1,0 +1,693 @@
+/* Quick Edit Button Styles */
+.quick-edit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border: 1px solid #5a6fd8 !important;
+    padding: 4px 8px !important;
+    border-radius: 3px !important;
+    font-size: 12px !important;
+    margin: 1px 3px !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+.quick-edit-btn:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a419c 100%) !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+    text-decoration: none !important;
+}
+
+.quick-edit-btn:active {
+    transform: translateY(0) !important;
+}
+
+/* Quick Create Button */
+.quick-create-btn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+    color: white !important;
+    border: 1px solid #1e7e34 !important;
+    margin-right: 10px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+.quick-create-btn:hover {
+    background: linear-gradient(135deg, #218838 0%, #1aa179 100%) !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3) !important;
+}
+
+/* Ensure buttons are visible in table */
+.table .quick-edit-btn {
+    white-space: nowrap;
+}
+
+/* Fix for OpenCart specific styles */
+.pull-right .quick-create-btn {
+    float: left;
+}
+
+/* Responsive buttons */
+@media (max-width: 768px) {
+    .quick-edit-btn {
+        padding: 3px 6px !important;
+        font-size: 11px !important;
+    }
+    
+    .quick-edit-btn i {
+        margin-right: 2px !important;
+    }
+}
+
+/* Button container fixes */
+.pull-right, .float-end, .buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Table action cell fixes */
+td.text-right {
+    text-align: right !important;
+    white-space: nowrap;
+}
+
+td.text-right .btn {
+    margin: 1px 2px;
+}
+
+/* Ensure buttons are visible in different OpenCart themes */
+.panel-body .quick-create-btn,
+.container-fluid .quick-create-btn {
+    margin-bottom: 10px;
+}
+
+/* Loading state for buttons */
+.quick-edit-btn.loading,
+.quick-create-btn.loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.quick-edit-btn.loading:after,
+.quick-create-btn.loading:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: button-spin 0.8s linear infinite;
+}
+
+@keyframes button-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Tab Styles */
+.quick-edit-tabs {
+    margin-bottom: 20px;
+}
+
+.tab-buttons {
+    display: flex;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+}
+
+.tab-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.tab-button:hover:not(.active) {
+    background: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Quick Create Button */
+.quick-create-btn {
+    margin-right: 10px;
+}
+
+/* Quick Edit Button in Actions */
+.quick-edit-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Category List */
+.category-list {
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.category-list .checkbox {
+    margin-bottom: 5px;
+}
+
+.category-list .checkbox:last-child {
+    margin-bottom: 0;
+}
+
+/* Language Tabs */
+.language-tab-buttons {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.language-tab-button {
+    padding: 8px 15px;
+    border: 1px solid #dee2e6;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language-tab-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.language-tab-button img {
+    width: 16px;
+    height: 11px;
+}
+
+/* Checkbox Styles */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    margin-top: 0;
+}
+
+.checkbox label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* Status Indicators */
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+/* Responsive Improvements */
+@media (max-width: 1200px) {
+    .quick-edit-content {
+        width: 95%;
+    }
+    
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .tab-button {
+        margin-bottom: 5px;
+    }
+}
+
+/* Loading States */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+/* Image Preview */
+.image-preview {
+    max-width: 100px;
+    max-height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+/* Attribute and Option Tables */
+.attribute-table, .option-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attribute-table th, .option-table th {
+    background: #f8f9fa;
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.attribute-table td, .option-table td {
+    padding: 8px;
+    border: 1px solid #dee2e6;
+}
+.quick-edit-btn:hover {
+    background: #1678b3;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.quick-edit-btn:before {
+    content: "✏️";
+    font-size: 11px;
+}
+
+.quick-edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 10000;
+    display: none;
+    backdrop-filter: blur(5px);
+}
+
+.quick-edit-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 0;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1400px;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.quick-edit-fullscreen .quick-edit-content {
+    width: 98%;
+    height: 98%;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+}
+
+.quick-edit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eaeaea;
+    background: #f8f9fa;
+}
+
+.quick-edit-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.quick-edit-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.quick-edit-controls button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.quick-edit-controls button:hover {
+    background: #f8f9fa;
+    border-color: #ccc;
+}
+
+.quick-edit-controls .save-btn {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.quick-edit-controls .save-btn:hover {
+    background: #218838;
+    border-color: #1e7e34;
+}
+
+.quick-edit-controls .close-btn {
+    background: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}
+
+.quick-edit-controls .close-btn:hover {
+    background: #5a6268;
+    border-color: #545b62;
+}
+
+.field-visibility-controls {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 10002;
+    display: none;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.field-visibility-controls h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.visibility-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.visibility-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.visibility-checkbox:hover {
+    background: #f8f9fa;
+}
+
+.visibility-checkbox input[type="checkbox"] {
+    margin: 0;
+}
+
+.visibility-checkbox label {
+    margin: 0;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.quick-edit-body {
+    padding: 20px;
+    max-height: calc(90vh - 120px);
+    overflow-y: auto;
+}
+
+.quick-edit-fullscreen .quick-edit-body {
+    max-height: calc(98vh - 120px);
+}
+
+.quick-edit-form {
+    height: 100%;
+}
+
+.quick-edit-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.field-group-section {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+}
+
+.field-group-section h4 {
+    margin: 0 0 15px 0;
+    color: #495057;
+    font-size: 16px;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 8px;
+}
+
+.quick-edit-field-group {
+    margin-bottom: 15px;
+}
+
+.quick-edit-field-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #495057;
+    font-size: 14px;
+}
+
+.quick-edit-field-group input,
+.quick-edit-field-group select,
+.quick-edit-field-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quick-edit-field-group input:focus,
+.quick-edit-field-group select:focus,
+.quick-edit-field-group textarea:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.quick-edit-field-group textarea {
+    min-height: 100px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.language-tabs {
+    margin-bottom: 15px;
+}
+
+.language-tab-buttons {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.language-tab-button {
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.3s ease;
+}
+
+.language-tab-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.language-tab-content {
+    display: none;
+}
+
+.language-tab-content.active {
+    display: block;
+}
+
+.fullscreen-active #column-left {
+    display: none !important;
+}
+
+.fullscreen-active #content {
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+
+.fullscreen-active #header {
+    display: none !important;
+}
+
+.overlay-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: none;
+}
+
+/* Loading spinner */
+.quick-edit-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .quick-edit-fields {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-edit-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .quick-edit-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .quick-edit-controls {
+        justify-content: center;
+    }
+    
+    .visibility-checkboxes {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Status indicators */
+.status-enabled {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-disabled {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Field validation */
+.field-error {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25) !important;
+}
+
+.field-success {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(40,167,69,.25) !important;
+}
+
+/* Notification styles */
+.quick-edit-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    z-index: 10003;
+    animation: slideIn 0.3s ease;
+}
+
+.notification-success {
+    background: #28a745;
+}
+
+.notification-error {
+    background: #dc3545;
+}
+
+.notification-warning {
+    background: #ffc107;
+    color: #212529;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
